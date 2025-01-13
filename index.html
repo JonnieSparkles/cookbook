@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonnie's Cookbook</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Add theme toggle -->
+    <div class="theme-toggle" role="button" aria-label="Toggle theme" tabindex="0"></div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="docs/git-cheat-sheet.html">Git Cheat Sheet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <div class="content">
+                <h1>Welcome to the Cookbook</h1>
+                
+                <p>A collection of guides, tools, and tips for building whatever comes to mind.</p>
+                
+                <h2>Available Guides</h2>
+                
+                <div class="guide-list">
+                    <div class="guide-card">
+                        <h3>Git Cheat Sheet</h3>
+                        <p>Essential Git commands and workflows for daily use.</p>
+                        <a href="docs/git-cheat-sheet.html" class="guide-link">Read Guide →</a>
+                    </div>
+                    <!-- More guide cards can be added here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add theme toggle script -->
+    <script>
+        const toggle = document.querySelector('.theme-toggle');
+        const root = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        root.setAttribute('data-theme', savedTheme);
+        
+        toggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            root.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        toggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle.click();
+            }
+        });
+    </script>
+</body>
+</html> 
