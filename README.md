@@ -1,6 +1,6 @@
 # Cookbook
 
-A collection of useful guides with a clean, responsive design and dark/light mode support.
+A collection of guides, tools, and tips for building whatever comes to mind.
 
 ## Quick Start
 
