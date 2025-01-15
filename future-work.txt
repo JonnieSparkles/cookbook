@@ -3,6 +3,7 @@ Future Work
 
 Features:
 -Create a tool that takes Markdown files as input and generates corresponding HTML.
+-Add info about working on branches
 
 Maintenance:
 -
